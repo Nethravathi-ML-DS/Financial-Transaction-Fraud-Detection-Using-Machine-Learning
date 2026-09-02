@@ -8,14 +8,15 @@ This project builds a predictive machine learning model to detect fraudulent fin
 * **Transaction Type Specificity**: Fraud events occur exclusively within `TRANSFER` and `CASH_OUT` transaction types. All other transaction types (`PAYMENT`, `CASH_IN`, `DEBIT`) showed zero instances of fraud.
 * **System Flagging Limitations**: The automated system flag (`isFlaggedFraud`) triggered only 16 times across 6.36M transactions, indicating a strong need for improved ML-driven detection logic.
 
-## Project Structure
-```text
-├── data/                  # Dataset directory (or link to Kaggle/external source)
-├── notebooks/             # Jupyter Notebooks containing EDA and Model Training
-│   └── fraud_detection.ipynb
-├── src/                   # Source code scripts (if modularized)
-├── README.md              # Project documentation
-└── requirements.txt       # Project dependencies
+Tech Stack & Dependencies
+Language: Python 3.x
+
+Data Processing & Analysis: pandas, numpy
+
+Visualization: matplotlib, seaborn
+
+Machine Learning: scikit-learn, XGBoost.
+
 
 
 Dataset Overview
@@ -37,29 +38,20 @@ isFraud: Target variable (1 = Fraud, 0 = Legitimate).
 
 isFlaggedFraud: Internal system flag for transactions > 200,000 units.
 
-Tech Stack & Dependencies
-Language: Python 3.x
 
-Data Processing & Analysis: pandas, numpy
 
-Visualization: matplotlib, seaborn
+## Project Structure
+```text
+├── data/                  # Dataset directory (or link to Kaggle/external source)
+├── notebooks/             # Jupyter Notebooks containing EDA and Model Training
+│   └── fraud_detection.ipynb
+├── src/                   # Source code scripts (if modularized)
+├── README.md              # Project documentation
+└── requirements.txt       # Project dependencies
 
-Machine Learning: scikit-learn, XGBoost.
 
-How to Run the Project
-Clone the repository:
 
-Bash
-git clone [https://github.com/Nethravathi-ML-DS/Financial-Transaction-Fraud-Detection-Using-Machine-Learning.git]
-cd fraud-detection-ml
-Install required dependencies:
 
-Bash
-pip install -r requirements.txt
-Run the Jupyter Notebook:
-
-Bash
-jupyter notebook notebooks/fraud_detection.ipynb
 
 
 ## 2. Refactor & Professionalize Your Jupyter Notebook
@@ -89,3 +81,19 @@ To complete your repository setup:
   matplotlib>=3.7.0
   seaborn>=0.12.0
   scikit-learn>=1.2.0
+
+
+How to Run the Project
+Clone the repository:
+
+Bash
+git clone [https://github.com/Nethravathi-ML-DS/Financial-Transaction-Fraud-Detection-Using-Machine-Learning.git]
+cd fraud-detection-ml
+Install required dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the Jupyter Notebook:
+
+Bash
+jupyter notebook notebooks/fraud_detection.ipynb
